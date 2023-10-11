@@ -1,5 +1,7 @@
 # Online Guessing Game
 
+Have Fun: https://ishan-nahid.github.io/guess_the_number
+
 ## Description
 
 This is a simple online number guessing game where the player tries to guess a randomly generated number between 1 and 100. The game provides feedback on whether the guess is too high or too low and keeps track of the number of attempts it takes to guess the correct number
