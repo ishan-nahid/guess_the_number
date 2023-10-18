@@ -1,5 +1,5 @@
 // Generate a random number between 1 and 100
-const secretNumber = Math.floor(Math.random() * 5) + 1;
+const secretNumber = Math.floor(Math.random() * 100) + 1;
 
 let attempts = 0; // Initialize a variable to keep track of the number of attempts
 
@@ -15,7 +15,7 @@ checkButton.addEventListener("click", function() {
     attempts++; // Increment the number of attempts
 
     // Check if the user's input is not a valid number between 1 and 100
-    if (isNaN(userGuess) || userGuess < 1 || userGuess > 5) {
+    if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
         message.textContent = "Please enter a valid number between 1 and 100.";
         message.style.color = "red"
     } else if (userGuess === secretNumber) { // Check if the user's guess is correct
