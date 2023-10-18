@@ -1,5 +1,5 @@
 // Generate a random number between 1 and 100
-const secretNumber = Math.floor(Math.random() * 100) + 1;
+const secretNumber = Math.floor(Math.random() * 5) + 1;
 
 let attempts = 0; // Initialize a variable to keep track of the number of attempts
 
@@ -15,10 +15,12 @@ checkButton.addEventListener("click", function() {
     attempts++; // Increment the number of attempts
 
     // Check if the user's input is not a valid number between 1 and 100
-    if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
+    if (isNaN(userGuess) || userGuess < 1 || userGuess > 5) {
         message.textContent = "Please enter a valid number between 1 and 100.";
+        message.style.color = "red"
     } else if (userGuess === secretNumber) { // Check if the user's guess is correct
         message.textContent = `Congratulations! You guessed the number in ${attempts} attempts.`;
+        message.style.color = "chartreuse"
         // confetti({
         //     particleCount: 100,
         //     spread: 70,
@@ -51,8 +53,10 @@ checkButton.addEventListener("click", function() {
         checkButton.disabled = true; // Disable the "Check" button
     } else if (userGuess < secretNumber) { // Check if the guess is too low
         message.textContent = "Too low. Try again.";
+        message.style.color = "red"
     } else { // If none of the above conditions are met, the guess is too high
         message.textContent = "Too high. Try again.";
+        message.style.color = "red"
     }
 
     attemptsDisplay.textContent = attempts; // Update the displayed number of attempts

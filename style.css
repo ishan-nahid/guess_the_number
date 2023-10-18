@@ -16,7 +16,10 @@ html, body {
 }
 
 h1 {
-    color: #333;
+    color: #fff;
+}
+.title{
+    color: #fff;
 }
 
 input[type="number"] {
@@ -40,3 +43,7 @@ p {
     margin: 10px;
     font-size: 18px;
 }
+.attempt-msg{
+    color: #fff;
+}
+
